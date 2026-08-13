@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf8">
+    <meta name="viewpoint" content="width=device-with, initial -scale=1">
+    <title>Proposal CTQ Web</title>
+</head>
+
+<body>
+    <header>Web CTQ</header>
+    
+    <h1>Web-based Mock Examination System (Hệ thống Thi thử Trực tuyến Nền tảng Web) </h1>
+    <h3><strong>Khách hàng/Đối tượng áp dụng:</strong> Các trường THPT, Trung tâm Luyện thi THPTQG, cá nhân thí sinh tham dự kỳ thi THPTQG</h3>
+    <h3><strong>Người đề xuất:</strong> Người đề xuất: Cao Quý Đức, Đào Hương Giang, Lê Đức Minh</h3>
+    <nav>
+        <ol>
+            <li><a href=#overview>Tính Cấp thiết và Đặt Vấn đề (Rationale & Problem Statement)</a></li>
+            <li><a href=#objectives>Mục tiêu Dự án (Project Objectives)</a></li>
+            <li><a href=#system> Kiến trúc Hệ thống & Giải pháp Công nghệ (System Architecture & Technical Solutions)</a></li>
+        </ol>
+    </nav>
+
+    <main>
+        <section id="overview">
+            <h2>1. Tính Cấp thiết và Đặt Vấn đề (Rationale & Problem Statement)</h2>
+            <h3>1.1. Góc độ Chính sách & Tầm nhìn Quốc gia: Đón đầu Đề án Thi THPT trên máy tính (2026 - 2036)</h3>
+            <p>Giáo dục Việt Nam đang bước vào một bước ngoặt lịch sử về chuyển đổi số. 
+                Theo công bố mới nhất vào tháng 07/2026, Bộ GD-ĐT đã hoàn thiện và trình Chính phủ 
+                Đề án tổ chức thi tốt nghiệp THPT trên máy tính giai đoạn 2026 - 2036. 
+                Đề án này nhấn mạnh nguyên tắc cốt lõi: 
+                <b>"Tự động hóa tối đa để giảm can thiệp chủ quan của con người, đồng thời duy trì cơ chế giám sát nghiêm ngặt bằng công nghệ."</b></p>
+            <p> Cụ thể, Bộ GD-ĐT định hướng áp dụng hàng loạt công nghệ tiên tiến vào hệ thống khảo thí quốc gia: 
+                ghi nhật ký toàn bộ thao tác, giám sát trạng thái máy thi, phát hiện dấu hiệu bất thường và 
+                ứng dụng AI để phân tích dữ liệu, rà soát hành vi.</p>
+            <p>Tuy nhiên, việc chuyển đổi từ thi giấy sang thi máy tính không thể diễn ra trong 
+                một sớm một chiều. Đa số học sinh THPT hiện nay chưa có kinh nghiệm làm bài thi 
+                chuẩn hóa trên nền tảng số với các quy định giám sát khắt khe. Do đó, các trường THPT 
+                và cơ sở giáo dục đang đối mặt với một áp lực lớn: Cần phải có ngay các công cụ mô phỏng 
+                chính xác môi trường thi trên máy tính của Bộ GD-ĐT để tổ chức thi thử định kỳ, giúp học 
+                sinh rèn luyện thao tác, làm quen với áp lực số hóa và chuẩn bị tâm lý vững vàng trước khi 
+                bước vào kỳ thi chuẩn hóa quốc gia đa đợt.</p>
+            <h3>1.2. Góc độ Sư phạm: Thách thức về "Điểm ảo" và sự toàn vẹn của dữ liệu đánh giá</h3>
+            <p>Trong quá trình chờ đợi cơ sở hạ tầng quốc gia hoàn thiện, các trường phổ thông đã và 
+                đang chủ động tổ chức thi thử trực tuyến. Tuy nhiên, tính vắng mặt của giám thị trực tiếp 
+                (physical proctor) đã tạo ra một lỗ hổng lớn về tính trung thực, dẫn đến những hệ lụy 
+                nghiêm trọng:</p>
+            <ul>
+                <li><strong>Sự bùng nổ của gian lận công nghệ cao:</strong> Học sinh dễ dàng sử dụng 
+                    các công cụ hỗ trợ giải bài tập tức thời. Việc mở tab ẩn danh để tra cứu, sử dụng 
+                    điện thoại thông minh quét câu hỏi qua các ứng dụng AI (như QANDA, Photomath), hoặc 
+                    trao đổi qua nhóm chat kín diễn ra phổ biến.</li>
+                <li><strong>Hệ lụy của "Điểm ảo" đối với chiến lược giảng dạy:</strong>Mục đích tối thượng
+                    của thi thử là cung cấp một bản "chẩn đoán" (diagnostic) chính xác về lỗ hổng kiến 
+                    thức. Khi học sinh đạt điểm cao nhờ gian lận, hệ thống đánh giá hoàn toàn bị vô hiệu 
+                    hóa. Giáo viên bị định hướng sai lệch bởi nguồn dữ liệu "ảo", dẫn đến việc xây dựng lộ
+                    trình ôn tập sai trọng tâm cho giai đoạn nước rút.</li>
+                <li><strong>Tâm lý ỷ lại:</strong>Môi trường thi thử lỏng lẻo sẽ dung túng cho thói quen 
+                    phụ thuộc tài liệu, khiến học sinh thất bại khi bước vào phòng thi thật và sự giám 
+                    sát của hệ thống máy tính từ Bộ GD-ĐT.</li>
+            </ul>
+            <h3>1.3. Góc độ Công nghệ: Khoảng trống giữa các nền tảng trong nước và giải pháp quốc tế</h3>
+            <p>Để giải quyết bài toán gian lận và mô phỏng lại hệ thống của Bộ GD-ĐT, công nghệ giám sát 
+                (Proctoring) là lời giải tất yếu. Tuy nhiên, khi áp dụng vào thực tiễn tại Việt Nam, 
+                chúng ta đang đối mặt với một khoảng trống lớn:</p>
+            <ul>
+                <li><strong>Các nền tảng khảo thí trong nước hiện tại quá sơ sài: </strong>Đa số các công 
+                    cụ (như Google Forms hay LMS cơ bản) chỉ làm nhiệm vụ phân phối câu hỏi. Các tính năng 
+                    chống gian lận (nếu có) chỉ dựa trên cơ chế bắt sự kiện trình duyệt (event-listener) 
+                    rất yếu, dễ dàng bị qua mặt.</li>
+                <li><strong>Sự cồng kềnh của các phần mềm Proctoring quốc tế:</strong>Các 
+                    giải pháp giám sát chuyên nghiệp (Proctorio, Respondus) thường yêu cầu 
+                    cài đặt phần mềm bên thứ ba can thiệp sâu vào hệ thống.</li>
+                    <ul>
+                        <li><strong>Rào cản về phần cứng:</strong> Các phần mềm này ép máy trạm 
+                            (client-side) phải chạy thuật toán phân tích nặng. Với điều kiện cơ sở vật 
+                            chất phân mảnh của học sinh Việt Nam (máy tính cũ, cấu hình thấp, mạng 
+                            không ổn định), điều này gây giật lag, treo máy và làm hỏng bài thi.</li>
+                        <li><strong>Rào cản về chi phí:</strong> Phí bản quyền ngoại tệ của các 
+                            giải pháp quốc tế vượt quá khả năng chi trả thường xuyên của các 
+                            trường THPT công lập.</li>
+                    </ul>
+            </ul>
+            <p><strong>Tiểu kết:</strong> Ngành giáo dục Việt Nam đang khát khao một nền tảng <b>Web-based Mock</b></p>
+            <p><b>Examination System</b>hoàn toàn bằng trình duyệt, không cần cài đặt phức tạp. 
+                Hệ thống này không chỉ giải quyết triệt để vấn nạn gian lận bằng AI Tracking tiên 
+                tiến (đáp ứng đúng tầm nhìn công nghệ của Bộ GD-ĐT), mà còn được tối ưu hóa luồng 
+                dữ liệu đám mây để hoạt động mượt mà trên mọi thiết bị yếu nhất của học sinh phổ 
+                thông.</p>   
+        </section>
+
+        <section id = "objectives">
+            <h2>2. Mục tiêu Dự án (Project Objectives)</h2>
+            <p>Dự án được thiết kế không chỉ để giải quyết bài toán giám sát, mà còn khai thác 
+                tối đa sức mạnh của dữ liệu để phục vụ công tác tư vấn tuyển sinh, cụ thể qua 3 
+                mục tiêu cốt lõi:</p>
+            <h3>2.1. Mục tiêu Khảo thí & Giáo dục (Educational & Assessment Objectives)</h3>
+            <ul>
+                <li><strong>Minh bạch hóa kết quả:</strong> Cung cấp một môi trường thi thử trực 
+                    tuyến nghiêm ngặt, triệt tiêu tối đa các hành vi gian lận (tra cứu tài liệu, 
+                    thi hộ) để đảm bảo điểm số thu được phản ánh chính xác 100% năng lực thực 
+                    chất của học sinh.</li>
+                <li><strong>Trải nghiệm tiệm cận kỳ thi quốc gia:</strong>Giúp học sinh làm quen 
+                    với giao diện, áp lực thời gian và quy chế thi trên máy tính, đón đầu lộ trình
+                    số hóa công tác khảo thí của Bộ GD-ĐT.</li>
+            </ul>
+            <h3>2.2. Mục tiêu Phân tích Dữ liệu & Tư vấn (Data Analytics & Counseling Objectives)</h3>
+            <p>Thay vì chỉ trả về một con số điểm đơn thuần, hệ thống chuyển hóa kết quả thi 
+                thành các báo cáo phân tích chuyên sâu (Personalized Reports), mang lại giá trị 
+                tham chiếu cao cho cả học sinh và giáo viên:</p>
+            <ul>
+                <li><strong>Định vị năng lực tương đối:</strong>Tự động tính toán và cung cấp vị 
+                    trí của thí sinh so với toàn bộ phổ điểm của đợt thi (hoặc dữ liệu mô phỏng 
+                    cả nước), thể hiện qua các chỉ số thống kê như: Điểm trung bình chung, 
+                    Tứ phân vị (Quartiles), và xếp hạng Percentile (thí sinh đang thuộc top 
+                    bao nhiêu % xuất sắc nhất).</li>
+                <li><strong>Tham chiếu điểm chuẩn Đại học:</strong>Tích hợp hệ thống cơ sở dữ liệu 
+                    điểm chuẩn lịch sử của các trường Đại học lớn. Dựa trên tổ hợp môn thi (khối thi)
+                    thí sinh đăng ký, hệ thống tự động đối chiếu và phân tích khả năng trúng tuyển, 
+                    từ đó giúp học sinh điều chỉnh nguyện vọng và chiến lược ôn tập kịp thời.</li>
+            </ul>
+            <h3>2.3. Mục tiêu Kỹ thuật & Hạ tầng (Technical & Infrastructure Objectives)</h3>
+            <ul>
+                <li><strong>Kiến trúc Web-based tinh gọn:</strong>Xây dựng nền tảng chỉ 
+                    chạy trên trình duyệt, không yêu cầu cài đặt, tối ưu hóa để hoạt động
+                    mượt mà trên mọi thiết bị máy tính cá nhân.</li>
+                <li><strong>Hệ sinh thái AI & Data Pipeline:</strong>
+                    <ul>
+                        <li>Tích hợp luồng xử lý học máy (Machine Learning) 
+                            để nhận diện tự động các hành vi bất thường, cảnh báo gian lận
+                            theo thời gian thực.</li>
+                        <li>Xây dựng module Phân tích Dữ liệu (Data Analytics) mạnh mẽ trên
+                            nền tảng đám mây (Cloud), có khả năng tổng hợp, tính toán phổ 
+                            điểm và xuất báo cáo thống kê cho hàng ngàn người dùng cùng lúc 
+                            mà không gây quá tải hệ thống.</li>
+                    </ul>
+                </li>
+            </ul> 
+        </section>
+
+        <section id="system">
+            <h2>3.Kiến trúc Hệ thống & Giải pháp Công nghệ (System Architecture & Technical Solutions)</h2>
+            <p>Hệ thống được triển khai hoàn toàn trên hạ tầng điện toán đám mây 
+                (Cloud Computing - dự kiến sử dụng AWS) với cơ chế tự động mở rộng (Auto-scaling),
+                đảm bảo chịu tải cao trong các kỳ thi thử quy mô lớn. Kiến trúc cốt lõi được chia 
+                thành 3 phân hệ chính:</p>
+            <h3>3.1. Phân hệ Giám sát Thời gian thực (Real-time AI Proctoring Pipeline)</h3>
+            <p>Để tránh tình trạng giật lag trên máy tính học sinh (Thin Client approach), 
+                luồng dữ liệu giám sát được thiết kế bất đồng bộ:</p>
+                <ul>
+                    <li><strong>Data Ingestion:</strong> Giao diện trình duyệt của học sinh định 
+                        kỳ chụp ảnh khung hình (webcam frames) và ghi nhận sự kiện (chuyển tab, 
+                        di chuột, copy/paste), nén lại và gửi lên server dưới dạng luồng dữ liệu 
+                        (data stream) thông qua WebSocket hoặc REST API.
+                    </li>
+                    <li><strong>Message Queue (Hàng đợi thông điệp):</strong>Sử dụng các dịch vụ
+                        như Amazon SQS hoặc Apache Kafka để tiếp nhận hàng chục ngàn request 
+                        gửi lên cùng lúc, tránh làm sập máy chủ.
+                    </li>
+                    <li><strong>AI Processing Workers:</strong> Các luồng dữ liệu từ hàng đợi sẽ 
+                        được đưa vào các server chạy mô hình Machine Learning 
+                        (Computer Vision/Anomaly Detection). Nếu phát hiện bất thường 
+                        (ví dụ: mất khuôn mặt, có điện thoại, có tiếng ồn lạ), hệ thống sẽ lập 
+                        tức tạo ra một bản ghi cảnh báo (Flag) dán nhãn thời gian (Timestamp).
+                    </li>
+                    <li><strong>Storage (Lưu trữ):</strong> Hình ảnh/video bằng chứng vi phạm 
+                        được lưu trực tiếp vào Object Storage (Amazon S3), trong khi log cảnh 
+                        báo được ghi vào cơ sở dữ liệu quan hệ (Amazon RDS) để hiển thị lên Live 
+                        Dashboard cho giám thị.
+                    </li>
+                </ul>
+            <h3>3.2. Phân hệ Xử lý Thống kê & Phân tích Học tập (Analytics Data Pipeline & Ranking Module)</h3>
+            <p>Đây là "trái tim" của hệ thống đánh giá, chịu trách nhiệm xử lý điểm số và xuất báo
+                cáo cá nhân hóa ngay sau khi kỳ thi kết thúc. Luồng xử lý được thiết kế theo quy
+                trình ETL (Extract - Transform - Load) tiêu chuẩn:</p>
+            <ul>
+                <li><strong>Bảng điểm gốc (Raw Data)</strong> Khi học sinh nộp bài, điểm số thô 
+                    của từng môn thi sẽ được lưu vào cơ sở dữ liệu giao dịch (Transactional DB).
+                </li>
+                <li><strong>Module Tính toán (Data Processing Engine):</strong>Sử dụng các thư viện 
+                    phân tích dữ liệu chuyên sâu (như Pandas/NumPy của Python) kết hợp với các hàm SQL 
+                    phân tích (Window Functions) để xử lý một lượng lớn dữ liệu cùng lúc.
+                </li>
+                <li><strong>Tâm lý ỷ lại:</strong>Môi trường thi thử lỏng lẻo sẽ dung túng cho thói quen 
+                    phụ thuộc tài liệu, khiến học sinh thất bại khi bước vào phòng thi thật và sự giám 
+                    sát của hệ thống máy tính từ Bộ GD-ĐT.</li>
+            </ul>
+            <h3>1.3. Góc độ Công nghệ: Khoảng trống giữa các nền tảng trong nước và giải pháp quốc tế</h3>
+            <p>Để giải quyết bài toán gian lận và mô phỏng lại hệ thống của Bộ GD-ĐT, công nghệ giám sát 
+                (Proctoring) là lời giải tất yếu. Tuy nhiên, khi áp dụng vào thực tiễn tại Việt Nam, 
+                chúng ta đang đối mặt với một khoảng trống lớn:</p>
+            <ul>
+                <li><strong>Các nền tảng khảo thí trong nước hiện tại quá sơ sài: </strong>Đa số các công 
+                    cụ (như Google Forms hay LMS cơ bản) chỉ làm nhiệm vụ phân phối câu hỏi. Các tính năng 
+                    chống gian lận (nếu có) chỉ dựa trên cơ chế bắt sự kiện trình duyệt (event-listener) 
+                    rất yếu, dễ dàng bị qua mặt.</li>
+                <li><strong>Sự cồng kềnh của các phần mềm Proctoring quốc tế:</strong>Các 
+                    giải pháp giám sát chuyên nghiệp (Proctorio, Respondus) thường yêu cầu 
+                    cài đặt phần mềm bên thứ ba can thiệp sâu vào hệ thống.</li>
+                    <ul>
+                        <li><strong>Rào cản về phần cứng:</strong> Các phần mềm này ép máy trạm 
+                            (client-side) phải chạy thuật toán phân tích nặng. Với điều kiện cơ sở vật 
+                            chất phân mảnh của học sinh Việt Nam (máy tính cũ, cấu hình thấp, mạng 
+                            không ổn định), điều này gây giật lag, treo máy và làm hỏng bài thi.</li>
+                        <li><strong>Rào cản về chi phí:</strong> Phí bản quyền ngoại tệ của các 
+                            giải pháp quốc tế vượt quá khả năng chi trả thường xuyên của các 
+                            trường THPT công lập.</li>
+                    </ul>
+            </ul>
+            <p><strong>Tiểu kết:</strong> Ngành giáo dục Việt Nam đang khát khao một nền tảng <b>Web-based Mock</b></p>
+            <p><b>Examination System</b>hoàn toàn bằng trình duyệt, không cần cài đặt phức tạp. 
+                Hệ thống này không chỉ giải quyết triệt để vấn nạn gian lận bằng AI Tracking tiên 
+                tiến (đáp ứng đúng tầm nhìn công nghệ của Bộ GD-ĐT), mà còn được tối ưu hóa luồng 
+                dữ liệu đám mây để hoạt động mượt mà trên mọi thiết bị yếu nhất của học sinh phổ 
+                thông.</p>  
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Web CTQ</p>
+    </footer>
+</body>
+</html>
