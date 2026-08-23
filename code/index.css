@@ -1,0 +1,75 @@
+h2{
+    color:darkorchid
+    /* font-size: 60px; */
+}
+
+.style1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#style2 {
+    font-size: 16px;
+    font-weight:  normal;
+}
+
+h1{
+    color: red;
+}
+
+.title{
+    color:green;
+}
+
+#header {
+    color: yellow;
+}
+
+section {
+    font-family: 'Roboto', sans-serif;
+    color:grey;
+}
+
+section.section p {
+    font-style: italic;
+}
+
+h2.section p {
+    font-style: italic;
+}
+
+h2:hover {
+    color: red;
+    font-size: 30px;
+}
+
+h1 {
+    /* margin: 20px 10px 30px 20px*/
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    padding: 380;
+    width: 400;
+}
+
+.dashboard {
+    display:flex;
+    flex-direction : row;
+    flex-wrap : wrap ; 
+    justify-content : space-between ; 
+    align-items: center ; 
+    height: 500px ; 
+    background-color: pink;
+}
+
+.card{
+    background-color: orange;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 8px;
+}
