@@ -99,25 +99,35 @@
     </table>
     </section>
 
-    <section id = "contact us">
-        <form action="/send" method="POST">
-        <label for="ten"> Full name </label>
-        <br/>
-        Name<input id="ten" name="ten" type="text" required>
+    <h2>Quản lý Điểm số (Lab 1)</h2>
 
-        Age<input name="tuoi" type="number">
-        Email<input name="email" type="email">
-        Male<input name="gioitinh" type="radio" value="nam">
-        Female<input name="gioitinh" type="radio" value="nu">
+    <!-- Form nhập điểm mới -->
+    <form id="scoreForm">
+        <div>
+            <label for="subjectName">Tên môn học:</label>
+            <input type="text" id="subjectName" required>
+        </div>
+        <br>
+        <div>
+            <label for="subjectScore">Điểm số:</label>
+            <input type="number" id="subjectScore" step="0.1" required>
+        </div>
+        <br>
+        <button type="submit">Thêm môn & Tính toán</button>
+        <div id="errorArea"></div>
+    </form>
 
+    <!-- Khu vực hiển thị kết quả lên màn hình -->
+    <div class="result-box">
+        <h3>📊 Kết quả tính toán:</h3>
+        <p><strong>1. Các môn đạt (Điểm > 7):</strong> <span id="passedSubjectsResult">Chưa có</span></p>
+        <p><strong>2. Tổng điểm:</strong> <span id="totalScoreResult">0</span></p>
+        <p><strong>3. Môn cao điểm nhất:</strong> <span id="highestScoreResult">Chưa có</span></p>
+    </div>
+    <script> 
+        alert("Hello from an embedded script"); 
+    </script>
 
-        <select name="thanhpho">
-            <option value="hn"> Hanoi</option>
-        </select>
-
-        <textarea name="ghichu"></textarea>
-        <button type="submit">Submit</button>
-        </form>
-    </section>
+    <script src="index.js"></script>
 </body>
 </html>
