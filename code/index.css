@@ -1,3 +1,4 @@
+/*lab 1 */
 h2{
     color:darkorchid
     /* font-size: 60px; */
@@ -43,6 +44,8 @@ h2:hover {
     font-size: 30px;
 }
 
+/* lab 2 */
+
 h1 {
     /* margin: 20px 10px 30px 20px*/
     margin-top: 20px;
@@ -56,6 +59,7 @@ h1 {
     width: 400;
 }
 
+/* lab 3 */
 .dashboard {
     display:flex;
     flex-direction : row;
@@ -72,4 +76,12 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin: 8px;
+}
+
+/* lab 4 */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+        height: auto;
+    }
 }

@@ -1,0 +1,23 @@
+[
+    {
+      "sme_id": "SME-101",
+      "company_name": "Công ty TNHH Alpha",
+      "credit_score": 850,
+      "risk_level": "Thấp",
+      "approved_limit": "500,000,000 VND"
+    },
+    {
+      "sme_id": "SME-102",
+      "company_name": "Công ty Cổ phần Beta",
+      "credit_score": 520,
+      "risk_level": "Cao",
+      "approved_limit": "0 VND"
+    },
+    {
+      "sme_id": "SME-103",
+      "company_name": "Xưởng sản xuất Gamma",
+      "credit_score": 710,
+      "risk_level": "Trung bình",
+      "approved_limit": "200,000,000 VND"
+    }
+  ]
